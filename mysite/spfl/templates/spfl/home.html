@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+
+    {% load staticfiles %}
+    {% block styles %}
+        <link rel="stylesheet" href="{% static 'spfl/style.css' %}">
+    {% endblock %}
+
+
+
+
+
+
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+    <h3>SPFL Players</h3>
+    <h4>2017-18</h4>
+
+    {% for player in players %}
+    <p>{{ player.player_forename }} {{ player.player_surname }} ({{ player.team }})</p>
+    {% endfor %}
+
+{% endblock %}
+
+{% block footer_link %}
+    |
+
+{% endblock %}

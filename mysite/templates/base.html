@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% load staticfiles %}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    {% block styles %}
+    {% endblock %}
+
+    <title>{% block title %}Impact{% endblock %}</title>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+
+
+        <div id="footer">
+
+                <br><br>
+
+
+                <p style="font-style: italic; text-align: center">© 2018 Hashtag Learning
+                </p>
+
+        </div>
+    </div>
+</body>
+</html>
